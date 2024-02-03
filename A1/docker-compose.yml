@@ -1,0 +1,16 @@
+services:
+  container1:
+    container_name: container1
+    image: nisargchudasama/calculator:latest
+    ports:
+      - "6000:6000"
+    volumes:
+      - .:/app/data  
+
+  container2:
+    container_name: container2
+    image: nisargchudasama/validator:latest
+    ports:
+      - "6001:6001"
+    volumes:
+      - .:/app/data  
